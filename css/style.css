@@ -16,6 +16,8 @@
     --main-color: #fd4646;
     --text-color: #171427;
     --bg-color: #fff;
+    --nav-color: #dddddd;
+    --nav-font-size: 0.8rem;
 }
 
 img {
@@ -32,9 +34,75 @@ body {
     width: 100%;
 }
 
+
+/* Home */
+.main{
+    display: flex;
+    justify-content: center;
+}
+.unknown{
+    background-color: #fff;
+    padding: 20px 0;
+}
+.release-phone{
+    background-image: linear-gradient(to right, #450064, #590e74, #6d1c85, #822995, #9736a6);
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+.banner{
+    width: 1920px;
+    height: 705px;
+    background-size: 1920px 736px;
+    background-repeat: no-repeat;
+    background-image: url('../img/iphone14pro banner.jpg');
+}
+
+.main h1{
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    top: 170px;
+}
+.main p{
+    position: absolute;
+    color: white;
+    font-size: 1.8rem;
+    top: 230px;
+}
+
+/* Footer  */
+
+footer{
+    display: flex;
+    justify-content: center;
+    width: 1903px;
+    height: 736px;
+    background-size: 1903px 736px;
+    background-repeat: no-repeat;
+    background-image: url('../img/iphone14pro.jpg');
+}
+.footer-relative{
+    position: absolute;
+    text-align: center;
+}
+footer h1{
+    margin-top: 60px;
+    font-size: 3.3rem;
+}
+footer .a{
+    margin-top: 10px;
+    font-size: 1.6rem;
+}
+footer .release{
+    margin-top: 10px;
+    font-size: 1.3rem;
+    color: gray;
+}
+
+/* iPhone Site*/
 section {
     padding: 5rem 0 3rem;
-
 }
 
 header {
@@ -45,24 +113,37 @@ header {
     background: var(--bg-color);
     box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
     z-index: 999;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(30px);
 }
 
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 12px;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: var(--nav-font-size);
     color: var(--text-color);
-    font-weight: bold;
+    color: var(--nav-color);
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover{
+    color: white;
 }
 
 #cart-icon {
-    font-size: 1.8rem;
+    font-size: 1rem;
     cursor: pointer;
+    color: var(--nav-color);
+    transition: 0.3s ease-in-out;
+}
+
+#cart-icon:hover{
+    color: white;
 }
 
 .cart {
@@ -269,3 +350,5 @@ header {
         width: 280px;
     }
 }
+
+
